@@ -1,0 +1,22 @@
+---
+title: Le Wagon - Team
+---
+
+<div id="team" style = "background-image: linear-gradient(0deg, #fff 50%, #F4F4F4 50%);">
+  <div class="team-content" style = "box-sizing: border-box;">
+    <h1 class="text-center" style = "font-size: 25px; font-weight: bold">This template is built with <i class="fa fa-heart" style= "color: #D23333"></i> by</h1>
+    <ul class="list-inline text-center">
+      <% data.users.last(2).each do |user| %>
+        <li>
+          <div class="image">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle", style: "height: 100px" %>
+          </div>
+          <h2 class="name" style="    font-size: 17px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6)"><%= user.name.capitalize %></h3>
+          <h3 style="color: rgba(0,0,0,0.25); font-weight: bold;    letter-spacing: -0.5px; font-size: 15px;"><i class="fa fa-github"></i> <%= user.github_nickname.capitalize %></h3>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
